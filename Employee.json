@@ -1,0 +1,24 @@
+{
+    "Emp": 
+    [
+    { "FirstName": "john","MiddlName":"mathew","LastName":"doe",
+    "Email":"abc@abc.com","phoneno":78978978978,"Role":"Trainee",
+    "Address":"2402 sec 71"},
+    {"FirstName": "Ankit","MiddlName":" ", "LastName":"Kumar",
+    "Email":"ab@ab.com","phoneno":78973478978,"Role":"Trainee",
+    "Address":"2402 sec 71"},
+    {"FirstName": "","MiddlName":"rai", "LastName":"Sethi",
+    "Email":"ab@ab.com","phoneno":78973478978,"Role":"Trainee",
+    "Address":"2402 sec 71"},
+    {"FirstName": "Archit","MiddlName":"rai", "LastName":"Sethi",
+    "Email":"ab@ab.com","phoneno":78973478978,"Role":"Trainee",
+    "Address":"2402 sec 71"},
+    {"FirstName": "Archit","MiddlName":"rai", "LastName":"Sethi",
+    "Email":"ab@ab.com","phoneno":78973478978,"Role":"Trainee",
+    "Address":"2402 sec 71"},
+    {"FirstName": "Archit","MiddlName":"rai", "LastName":"Sethi",
+    "Email":"ab@ab.com","phoneno":78973478978,"Role":"Trainee",
+    "Address":"2402 sec 71"}
+]
+} 
+
