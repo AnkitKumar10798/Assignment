@@ -1,0 +1,35 @@
+
+#body1
+{
+    background-color: rgba(100,100,100,);
+}
+#LOAD
+{
+    text-decoration: greenyellow;
+    color: rgb(255, 255, 255);
+    background-color: rgb(100,100,100);
+    stroke-opacity: 50%;
+    border-radius: 50px;
+}
+#empTable{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #empTable td, #empTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #empTable tr:nth-child(even){background-color: #f2f2f2;}
+  #empTable tr:nth-child(odd){background-color: #f2f2f2;}  
+  #empTable tr:hover {background-color: #ddd;}
+  
+  #empTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
