@@ -1,92 +1,77 @@
-let check = 0;
-//check 0 edit and delete buttons set to save and cancel
-//check 1  save and cancel buttons set to edit and delete
+let check = 0;//check 0 edit and delete buttons set to save and cancel and check 1  save and cancel buttons set to edit and delete
 let deleted_row = [];
 let datalen;
 $(document).ready(function() {
     console.log( "ready!");
     $("button").click(function()
-{
-    $.getJSON("Employee.json",function(obj){
+    {   $.getJSON("Employee.json",function(obj){
         $.each(obj,function(key,value)
         {
             call(value);// value is the array of objects 
         });
     });
 
-});
-
-});
-
+    });
+    });
 function call(Emp)
-{
-        document.getElementById("LOAD").innerHTML= "REFRESH DATA";
-        
+{   document.getElementById("LOAD").innerHTML= "REFRESH DATA";
         let div = document.getElementById("id1");
         div.innerHTML=" ";
         CreateTable(Emp); 
-    //     while(div.firstChild)
-    //     {
-    //         div.removeChild(div.firstChild);
-    //     }
+        //     while(div.firstChild)
+        //     {
+        //         div.removeChild(div.firstChild);
+        //     }
 }
 function CreateTable(Emp) {
-
     let table = document.createElement('table');
     table.setAttribute('id', 'empTable');
-
+    table.setAttribute('class',"table  table-light table-hover")
+    table.style.tableLayout = "fixed";
     let arrHeaders = new Array();
     arrHeaders = ['FirstName','MiddleName','LastName','Email','Phoneno','Role','Address','Edit option','Delete option'];
-    let arrValue = new Array();
-    for(var i in Emp) {
-    // i is the property name
-    arrValue.push(Emp[i]);
-    }
-for(let x =0;x<datalen;x++)
-{
-    deleted_row[x]=false;
-}
     datalen=Emp.length;
+    let arrValue = new Array();
+        for(var i in Emp) {    // i is the property name
+        arrValue.push(Emp[i]); }
+
+        for(let x =0;x<datalen;x++){deleted_row[x]=false;}
 
     let tr = table.insertRow(-1);
     //create Headers
-    for (let h = 0; h < arrHeaders.length; h++) {
-        let th = document.createElement('th');
-        th.setAttribute("class","headers")              
-        th.innerHTML = arrHeaders[h];
-        tr.appendChild(th);
-    }
+        for (let h = 0; h < arrHeaders.length; h++) 
+        {
+            let th = document.createElement('th');
+            th.setAttribute("class","table table-dark");              
+            th.innerHTML = arrHeaders[h];
+            tr.appendChild(th);
+        }
         let class_name;
-//    console.log(arr_len);
-    for (let c = 0; c <datalen; c++) {
-        tr = table.insertRow(-1);
-        tr.setAttribute("id","row"+c);
-        if(c&1===0)
-        {
-            tr.setAttribute("class","evenrows");
-        }
-        else
-        {
-            tr.setAttribute("class","oddrows");
-        }
-        tr.innerHTML = 
-        '<td  class="cell'+c+'">' + arrValue[c].FirstName + '</td>' +
-        '<td  class="cell'+c+'">' + arrValue[c].MiddleName + '</td>' +
-        '<td  class="cell'+c+'">' + arrValue[c].LastName + '</td>' +
-        '<td  class="cell'+c+'">' + arrValue[c].Email + '</td>' +
-        '<td  class="cell'+c+'">' + arrValue[c].phoneno + '</td>' +
-        '<td  class="cell'+c+'">' + arrValue[c].Role + '</td>' +
-        '<td  class="cell'+c+'">' + arrValue[c].Address + '</td>'+
-        '<td> <button type="button" onclick="editData('+c+')" id="edit'+c+'"> edit data</button></td>'+'<td> <button type="button" onclick="deleteData('+c+')" id="delete'+c+'"> delete data </button></td>';   
-        class_name = "cell"+c;
+        for (let c = 0; c <datalen; c++) {
+             tr = table.insertRow(-1);
+             tr.setAttribute("id","row"+c);
+             tr.style.textAlign="center";
+             console.log(arrValue[c].FirstName)
+            tr.innerHTML = 
+            '<td  class="cell'+c+'">' + arrValue[c].FirstName + '</td>' +
+            '<td  class="cell'+c+'">' + arrValue[c].MiddleName + '</td>' +
+            '<td  class="cell'+c+'">' + arrValue[c].LastName + '</td>' +
+            '<td  class="cell'+c+'">' + arrValue[c].Email + '</td>' +
+            '<td  class="cell'+c+'">' + arrValue[c].phoneno + '</td>' +
+            '<td  class="cell'+c+'">' + arrValue[c].Role + '</td>' +
+            '<td  class="cell'+c+'">' + arrValue[c].Address + '</td>'+
+            '<td> <button type="button" class="btn btn-primary" onclick="editData('+c+')" id="edit'+c+'"> edit data</button></td>'+
+            '<td> <button type="button" class = "btn btn-primary" onclick="deleteData('+c+')" id="delete'+c+'"> delete data </button></td>';   
+            class_name = "cell"+c;
     }
     cells = document.getElementsByClassName(class_name);
-    for(cell =0;cell>cells.length;cell++)
-    {
-        cells[cell].setAttribute("contenteditable","false");
-    }
+            for(cell =0;cell>cells.length;cell++)
+            {
+            cells[cell].setAttribute("contenteditable","false");
+            }
    
-    document.getElementById("id1").appendChild(table);    
+    document.getElementById("id1").appendChild(table);  
+      
 }
 let stored_tblbody;
 function deleteData(num)
