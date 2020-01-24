@@ -34,6 +34,7 @@ function CreateTable(Emp) {
 
     let table = document.createElement('table');
     table.setAttribute('id', 'empTable');
+    table.setAttribute('class',"table")
 
     let arrHeaders = new Array();
     arrHeaders = ['FirstName','MiddleName','LastName','Email','Phoneno','Role','Address','Edit option','Delete option'];
@@ -52,7 +53,7 @@ for(let x =0;x<datalen;x++)
     //create Headers
     for (let h = 0; h < arrHeaders.length; h++) {
         let th = document.createElement('th');
-        th.setAttribute("class","headers")              
+       // th.setAttribute("class","thead-dark");              
         th.innerHTML = arrHeaders[h];
         tr.appendChild(th);
     }
@@ -61,14 +62,14 @@ for(let x =0;x<datalen;x++)
     for (let c = 0; c <datalen; c++) {
         tr = table.insertRow(-1);
         tr.setAttribute("id","row"+c);
-        if(c&1===0)
-        {
-            tr.setAttribute("class","evenrows");
-        }
-        else
-        {
-            tr.setAttribute("class","oddrows");
-        }
+        // if(c&1===0)
+        // {
+        //     tr.setAttribute("class","evenrows");
+        // }
+        // else
+        // {
+        //     tr.setAttribute("class","oddrows");
+        // }
         tr.innerHTML = 
         '<td  class="cell'+c+'">' + arrValue[c].FirstName + '</td>' +
         '<td  class="cell'+c+'">' + arrValue[c].MiddleName + '</td>' +
@@ -77,7 +78,8 @@ for(let x =0;x<datalen;x++)
         '<td  class="cell'+c+'">' + arrValue[c].phoneno + '</td>' +
         '<td  class="cell'+c+'">' + arrValue[c].Role + '</td>' +
         '<td  class="cell'+c+'">' + arrValue[c].Address + '</td>'+
-        '<td> <button type="button" onclick="editData('+c+')" id="edit'+c+'"> edit data</button></td>'+'<td> <button type="button" onclick="deleteData('+c+')" id="delete'+c+'"> delete data </button></td>';   
+        '<td> <button type="button" class="btn btn-primary" onclick="editData('+c+')" id="edit'+c+'"> edit data</button></td>'+
+        '<td> <button type="button" class = "btn btn-primary" onclick="deleteData('+c+')" id="delete'+c+'"> delete data </button></td>';   
         class_name = "cell"+c;
     }
     cells = document.getElementsByClassName(class_name);
