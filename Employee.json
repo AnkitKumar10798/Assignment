@@ -1,58 +1,41 @@
 {
   "Emp": [
     {
-      "FirstName": "john",
-      "MiddleName": "mathew",
-      "LastName": "doe",
-      "Email": "abc@abc.com",
-      "phoneno": 78978978978,
-      "Role": "Trainee",
-      "Address": "2402 sec 71"
-    },
-    {
-      "FirstName": "Ankit",
-      "MiddleName": " ",
-      "LastName": "Kumar",
-      "Email": "ankit123@gmail.com",
-      "phoneno": 78973478978,
-      "Role": "Trainee",
-      "Address": "242 sec 71"
-    },
-    {
-      "FirstName": "Simarpreet",
-      "MiddleName": "rai",
-      "LastName": "Singh",
-      "Email": "ab@ab.com",
-      "phoneno": 78973478978,
-      "Role": "Trainee",
+      "firstName": "john",
+      "middleName": "mathew",
+      "lastName": "doe",
+      "Email": "john@sf.com",
+      "phone": 88978978978,
+      "Role": "QA",
       "Address": "chandigarh"
     },
     {
-      "FirstName": "Aditi",
-      "MiddleName": "rai",
-      "LastName": "Singh",
-      "Email": "ab@ab.com",
-      "phoneno": 78973478978,
-      "Role": "Trainee",
-      "Address": "2402 sec 71"
+      "firstName": "Ankit",
+      "middleName": "Kumar",
+      "lastName": "Srivastava",
+      "Email": "ankit123@sf.com",
+      "phone": 78973478978,
+      "Role": "Devops",
+      "Address": "Mohali"
     },
     {
-      "FirstName": "",
-      "MiddleName": "rai",
-      "LastName": "Sethi",
-      "Email": "ab@ab.com",
-      "phoneno": 78973478978,
-      "Role": "Trainee",
-      "Address": "2402 sec 71"
+      "firstName": "Simarpreet",
+      "middleName": "rai",
+      "lastName": "Singh",
+      "Email": "Simar@sf.com",
+      "phone": 78973478978,
+      "Role": "UI designer",
+      "Address": "chandigarh"
     },
     {
-      "FirstName": "",
-      "MiddleName": "rai",
-      "LastName": "Sethi",
-      "Email": "ab@ab.com",
-      "phoneno": 78973478978,
-      "Role": "Trainee",
-      "Address": "2402 sec 71"
+      "firstName": "Aditi",
+      "middleName": "rai",
+      "lastName": "Singh",
+      "Email": "Aditi@sf.com",
+      "phone": 78973448978,
+      "Role": "Developer",
+      "Address": "Noida"
     }
+    
   ]
 }

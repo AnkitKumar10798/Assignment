@@ -8,7 +8,6 @@ let check = 0,
     stored_tblbody;
 
 $(document).ready(function() {
-    console.log("ready!");
     $("#LOAD").click(function() {
         $.getJSON("Employee.json", function(obj) {
             $.each(obj, function(key, value) {
