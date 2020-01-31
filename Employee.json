@@ -1,5 +1,4 @@
-{
-  "Emp": [
+[
     {
       "firstName": "john",
       "middleName": "mathew",
@@ -38,4 +37,4 @@
     }
     
   ]
-}
+
